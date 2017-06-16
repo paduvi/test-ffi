@@ -3,11 +3,11 @@
  */
 var ffi = require('ffi')
 
-var libfactorial = ffi.Library('./libfactorial', {
+var libfactorial = ffi.Library(__dirname + '/libfactorial', {
     'factorial': ['uint64', ['int']]
 });
 
-var libhello = ffi.Library('./hello', {
+var libhello = ffi.Library(__dirname + '/hello', {
     'hello': ['void', []]
 })
 
